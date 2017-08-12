@@ -9,6 +9,12 @@ class Solution(object):
         middle = 0
         rear = 0
 
+        total_length = len(s)
+
+        if k > total_length
+
+    def sectionRev(self, sec, k):
         
+
 if __name__ == '__main__':
     print Solution().reverseStr('abcdefg', 2)
