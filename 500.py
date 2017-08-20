@@ -1,11 +1,12 @@
 class Solution(object):
+
     def findWords(self, words):
         """
         :type words: List[str]
         :rtype: List[str]
         """
         r = list()
-        keyboard = ['qwertyuiop','asdfghjkl','zxcvbnm']
+        keyboard = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
         for row in keyboard:
             for a in words:
                 if self.check(a.lower(), row):
