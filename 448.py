@@ -4,14 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        ret_list = []
+        if len(nums) < 2:
+            return nums
+        relist = []
         nums.sort()
-        for i in range(1, len(nums)-1):
-            if nums[i+1] - nums[i] > 1:
-                if nums[i]+1 not in ret_list:
-                    if nums[i] + 1 not 
-                    ret_list.append(nums[i]+1)
-        return ret_list
+
+        
 
 
 if __name__ == '__main__':
