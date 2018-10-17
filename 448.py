@@ -1,18 +1,24 @@
-class Solution(object):
+class Solution:
     def findDisappearedNumbers(self, nums):
         """
         :type nums: List[int]
         :rtype: List[int]
         """
-        ret_list = []
-        nums.sort()
-        for i in range(1, len(nums)-1):
-            if nums[i+1] - nums[i] > 1:
-                if nums[i]+1 not in ret_list:
-                    if nums[i] + 1 not 
-                    ret_list.append(nums[i]+1)
-        return ret_list
+        # for i in range(1, len(nums)+1):
+        #     while nums[i] != i:
+        #         print(i, nums[i], nums[nums[i]])
+        #         if nums[i] != nums[nums[i]]:
+        #             tag = nums[i]
+        #             nums[i], nums[tag] = nums[tag], nums[i]
+        #         else:
+        #             break
+        # res = []
+        # for i in range(1, len(nums)+1):
+        #     if nums[i] != i:
+        #         res.append(nums[i])
+        # return res
+        return list(set(range(1, len(nums)+1)) - set(nums))
 
 
-if __name__ == '__main__':
-    print Solution().findDisappearedNumbers([4,3,2,7,8,2,3,1])
+n = [0,1,3,4,1,2]
+print(Solution().findDisappearedNumbers(n))
